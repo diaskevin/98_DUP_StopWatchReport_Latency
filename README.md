@@ -1,3 +1,1 @@
-# 03_DEP_MavenResolverPOMxml
-
-Internet explorer (depreciated) fails
+# 03_Latency_StopWatchReporting
