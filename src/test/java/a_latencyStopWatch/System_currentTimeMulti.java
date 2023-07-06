@@ -1,16 +1,19 @@
 package a_latencyStopWatch;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class System_currentTimeMulti {
 	
 	
 	@Test
 	public void latencyTest() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver",  "D:\\02_Kevin\\qa\\Selenium\\chromedriver\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver",  "C:\\Users\\vm\\Desktop\\qa\\projectShare\\resource\\chromedriver\\chromedriver.exe");
+		ChromeOptions chromeOptions = new ChromeOptions();
+		chromeOptions.addArguments("--remote-allow-origins=*");
+		WebDriver driver =  new ChromeDriver(chromeOptions);
 		 long start = System.currentTimeMillis();
 		driver.get("http://google.com");
 		
